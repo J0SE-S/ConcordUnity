@@ -9,6 +9,7 @@ public class CharacterMovement : NetworkBehaviour {
     Vector3 moveDirection;
     const float speed = 0.25f;
     const float rotationSpeed = 10f;
+    const float jumpHeight = 15f;
 
     [Client]
     void Start() {
@@ -52,5 +53,6 @@ public class CharacterMovement : NetworkBehaviour {
         if (!isOwned) return;
 
         body.AddForce(moveDirection.normalized * speed, ForceMode.VelocityChange);
+        if (Input.GetKey("space") && Physics.Raycast(transform.position, Vector3.down, GetComponent<Collider>().bounds.extents.y + 0.1f)) body.AddForce(transform.up * jumpHeight, ForceMode.Impulse);
     }
 }
