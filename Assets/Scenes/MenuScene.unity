@@ -410,7 +410,8 @@ MonoBehaviour:
   playerPrefab: {fileID: 2282440955203334399, guid: 2fdecbaa731d8daee8c08d51f50d70cc, type: 3}
   autoCreatePlayer: 1
   playerSpawnMethod: 0
-  spawnPrefabs: []
+  spawnPrefabs:
+  - {fileID: 2614480697961640061, guid: 62a8013ffcf04632291791208215970c, type: 3}
   snapshotSettings:
     bufferTimeMultiplier: 2
     catchupNegativeThreshold: -1
@@ -1742,9 +1743,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 705507999}
-        m_TargetAssemblyTypeName: Mirror.NetworkManager, Mirror
-        m_MethodName: StartHost
+      - m_Target: {fileID: 705508003}
+        m_TargetAssemblyTypeName: MainScript, Assembly-CSharp
+        m_MethodName: SettingsButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

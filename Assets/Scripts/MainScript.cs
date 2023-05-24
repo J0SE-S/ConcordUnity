@@ -33,7 +33,11 @@ public class MainScript : NetworkBehaviour {
     }
 
     public void PlayButton() {
+#if UNITY_EDITOR
+        GetComponent<NetworkManager>().StartHost();
+#else
         GetComponent<NetworkManager>().StartClient();
+#endif
     }
 
     public void SettingsButton() {}
